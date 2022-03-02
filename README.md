@@ -1,3 +1,3 @@
 # data-structures-and-algorithms.
   ## array shift insert
-    ![Untitled](https://user-images.githubusercontent.com/61474974/156448073-f3a26087-6a3b-4dc4-bf44-3c4ed7a0b70e.jpg)
+![insert shift array](https://user-images.githubusercontent.com/61474974/156448286-96e887c3-d02b-4589-b744-11552001545a.jpg)

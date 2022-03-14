@@ -2,15 +2,15 @@
 write a three methods to linked list class :
 
 append
-           takes a value as argument
-   create a node takes the given value and add it to end of the list
+  * takes a value as argument
+  *  create a node takes the given value and add it to end of the list
 
 insert_before
-   takes a value and a key as arguments
-    create a node takes the given value and add it before the node with the specified key
+   * takes a value and a key as arguments
+   * create a node takes the given value and add it before the node with the specified key
 insert_after
-   takes a value and a key as arguments
-      create a node takes the given value and add it after the node with the specified key
+   * takes a value and a key as arguments
+   * create a node takes the given value and add it after the node with the specified key
 
 ## Whiteboard Process
 

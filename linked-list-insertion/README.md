@@ -23,3 +23,5 @@ append insert before/after has a time comlixity O(n) in worst average case (n/2)
 
 ## Solution
 the solution inside
+
+https://github.com/MohammadSalhab99/data-structures-and-algorithms./pull/3

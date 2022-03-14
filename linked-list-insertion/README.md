@@ -6,11 +6,11 @@ append
   *  create a node takes the given value and add it to end of the list
 
 insert_before
-   * takes a value and a key as arguments
+   * takes a value and a key as arguments 
    * create a node takes the given value and add it before the node with the specified key
 insert_after
    * takes a value and a key as arguments
-   * create a node takes the given value and add it after the node with the specified key
+   * create a node takes the given value and add it after the node with the specified key
 
 ## Whiteboard Process
 

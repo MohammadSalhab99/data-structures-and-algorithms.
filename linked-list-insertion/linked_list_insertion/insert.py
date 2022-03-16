@@ -9,6 +9,10 @@ class Linked_list:
     self.head = None
    
   def insert(self,value):
+         """
+    insert a node to the beginning of the linked list
+    
+    """
     try:
       node=Node(value)
       if self.head == None:
@@ -24,6 +28,9 @@ class Linked_list:
       print("Error in insert method")
     
   def includes (self,value):
+         """
+    check if the node the have the given value is exist in the list or not
+    """
     try:
       current=self.head
       while current and current.next != None:
@@ -34,6 +41,10 @@ class Linked_list:
     except:
       print("Error in includes method")
   def to_string(self):
+    """
+    This function returns a string representation of the linked list
+    
+    """
     try:
         current=self.head
         result=''
@@ -51,6 +62,13 @@ class Linked_list:
 
   
   def append(self, data):
+    
+
+    """
+    append a node the end of the linked list
+    """
+
+   
     try:
   
       node = Node(data)
@@ -109,15 +127,3 @@ class Linked_list:
 # print(link_list.to_string())
 
 
-
-
-    """
-    append a node the end of the linked list
-    """
-     """
-    check if the node the have the given value is exist in the list or not
-    """
-     """
-    insert a node to the beginning of the linked list
-    
-    """

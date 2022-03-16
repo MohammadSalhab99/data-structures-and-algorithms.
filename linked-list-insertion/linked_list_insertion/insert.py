@@ -111,4 +111,13 @@ class Linked_list:
 
 
 
-
+    """
+    append a node the end of the linked list
+    """
+     """
+    check if the node the have the given value is exist in the list or not
+    """
+     """
+    insert a node to the beginning of the linked list
+    
+    """

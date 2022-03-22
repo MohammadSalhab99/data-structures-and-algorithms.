@@ -159,22 +159,59 @@ class Linked_list:
        
         count+=1
         current=current.next
+  @classmethod
+  def zip_lists(self,list1,list2):
+    current1 =list1.head
+    current2 = list2.head
+    # next1= Node(None)
+    # next2 = Node(None)
+    while current1 and current2 !=None:
+      next1 = current1.next
+      next2 = current2.next
+      current1.next =current2
+      current1=next1
+      if current1!=None:
+        current2.next =current1
+      current2= next2
+    return list1
+
+
+      
+     
+
+      
 
 
 
 
-link_list= Linked_list()
-link_list.insert( 2)
-link_list.insert( 8)
-link_list.insert( 3)
-link_list.insert( 1)
+# link_list= Linked_list()
+# link_list.insert( 2)
+# link_list.insert( 8)
+# link_list.insert( 3)
+# link_list.insert( 1)
+# # link_list.insert_after(3,5)
+# print(link_list.to_string())
+# print(link_list.kthFromEnd(2))
+# print(link_list.kthFromEnd(-2))
+# print(link_list.to_string())
 
-# link_list.insert_after(3,5)
-print(link_list.to_string())
-print(link_list.kthFromEnd(2))
-print(link_list.kthFromEnd(-2))
+list1 = Linked_list()
+
+list1.insert(2)
+list1.insert(3)
+list1.insert(1)
+list2 = Linked_list()
+list2.insert(4)
+list2.insert(9)
+list2.insert(5)
+
+print(list1.to_string())
+print(list2.to_string())
+Linked_list.zip_lists(list1,list2)
+print(list1.to_string())
+print(list2.to_string())
 
 
-print(link_list.to_string())
+
 
 

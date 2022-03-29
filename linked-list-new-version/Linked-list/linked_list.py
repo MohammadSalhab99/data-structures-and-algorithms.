@@ -7,6 +7,7 @@ class Linked_list:
   
   def __init__(self):
     self.head = None
+    self.size = 0
    
   def insert(self,value):
     """
@@ -16,10 +17,12 @@ class Linked_list:
       node=Node(value)
       if self.head == None:
           self.head = node
+          self.size += 1
           # print(self.head.value)
       else:
           node.next=self.head
           self.head=node
+          self.size += 1
           # print(self.head.value)
 
           
@@ -73,11 +76,14 @@ class Linked_list:
       node = Node(data)
       if self.head == None:
           self.head = node
+          self.size += 1
       else:
           current = self.head
           while current.next != None:
               current = current.next
+              self.size += 1
           current.next = node
+          
 
     except:
       print("append Error")
@@ -97,6 +103,7 @@ class Linked_list:
             if current.next.value == key:
                 new_node.next = current.next
                 current.next = new_node
+                self.size += 1
                 print ("added")
                 break
           current= current.next
@@ -112,20 +119,62 @@ class Linked_list:
       if current.value == key:
           new_node.next = current.next
           current.next = new_node
+          self.size += 1
           break
       current= current.next
  
+  def reverse(self):
+    """
+    This function reverse the order of the nodes in the linked list 
+    """
+    prev = None
+    current = self.head
+    while(current is not None):
+        next = current.next
+        current.next = prev
+        prev = current
+        current = next
+    self.head = prev
+  def kthFromEnd(self, k):
+    """
+    this function returns the kth node from the end of the linked list
+    """
+    if(k==0 and self.size==1):
+      return self.head.value
+
+    if(k>=self.size):
+      
+      return ("out of range")
+    
+    self.reverse()
+    
+    k=abs(k) # handle negative 
+    count = 0
+    current = self.head
+    while current.next != None :
+      if k==count :
+      
+        return current.value 
+      else :
+       
+        count+=1
+        current=current.next
 
 
-# link_list= Linked_list()
-# link_list.insert( 2)
-# link_list.insert( 3)
-# link_list.insert( 1)
+
+
+link_list= Linked_list()
+link_list.insert( 2)
+link_list.insert( 8)
+link_list.insert( 3)
+link_list.insert( 1)
 
 # link_list.insert_after(3,5)
-# print(link_list.to_string())
-# print(link_list.kthFromEnd(2))
+print(link_list.to_string())
+print(link_list.kthFromEnd(2))
+print(link_list.kthFromEnd(-2))
 
-# print(link_list.to_string())
+
+print(link_list.to_string())
 
 

@@ -1,18 +1,31 @@
 class Node :
+  """
+  This class for creating nodes
+  """
   def __init__(self,value):
     self.value=value
     self.next=None 
 
 class Stack :
+  """
+  Stack class for creating stack 
+  """
   def __init__(self,node=None):
     self.top = node 
 
   def push(self,value):
+    """
+    This methods takes a value and push a node at the top of the stack that holds the given value
+
+    """
     node = Node(value)
     node.next = self.top
     self.top = node 
 
   def pop(self) :
+    """
+    This method pop the value at the top of the stack and returns that value
+    """
     temp = self.top
     self.top = self.top.next
     temp.next= None
@@ -20,13 +33,22 @@ class Stack :
     return temp.value
 
   def peek(self):
+    """This method returns the value of the top value of the stack
+
+    Raises:
+        ValueError: if the stack is empty
+
+    Returns:
+        value: top value of the stack
+    """
     if self.is_empty():
         raise ValueError("Empty")
     return self.top.value
    
   def is_empty(self):
-    """method to check if stack is impty
-     return boolean
+    """
+    method to check if stack is empty
+    return boolean
     """
     return self.top == None 
      # return self.top
@@ -35,10 +57,17 @@ class Stack :
 
 class Queue :
   def __init__(self):
+    """intiat front and the rear of the queue"""
+
     self.front=None
     self.rear=None
 
   def enqueue(self,value):
+    """This method takes a value and put it at the rear of the queue
+    if the queue is empty the new node will in the front and the rear of the queue
+
+    args: value
+    """
     node = Node(value)
 
     if not self.front :

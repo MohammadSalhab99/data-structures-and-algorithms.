@@ -109,3 +109,5 @@ class Queue :
         raise ValueError("Empty")
     peek = self.front
     return peek.value
+  
+ 

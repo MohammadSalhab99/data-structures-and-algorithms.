@@ -56,3 +56,27 @@ The class should contain the following methods:
     is empty
     Arguments: none
     Returns: Boolean indicating whether or not the queue is empty
+
+## pseudo Queue
+### Challenge Summary
+Create a new class called pseudo queue.
+Do not use an existing Queue.
+Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
+Internally, utilize 2 Stack instances to create and manage the queue
+Methods:
+enqueue
+Arguments: value
+Inserts value into the PseudoQueue, using a first-in, first-out approach.
+dequeue
+Arguments: none
+Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+
+#### Whiteboard Process
+![stack-queue-pseudo](https://user-images.githubusercontent.com/61474974/160931645-31d7d256-c443-4cf2-8635-415f967149be.jpg)
+
+
+#### Approach & Efficiency
+The Big O of the  methods is O(n) where n is the number of nodes 
+
+#### Solution
+In python files

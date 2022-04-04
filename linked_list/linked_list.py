@@ -161,6 +161,15 @@ class Linked_list:
         current=current.next
   @classmethod
   def zip_lists(self,list1,list2):
+    """This method takes two lists and returns a zipped list
+
+    Args:
+        list1 (linked list): first list
+        list2 (linked list): second list
+
+    Returns:
+        list (linked list): New Linked List, zipped
+    """
     current1 =list1.head
     current2 = list2.head
     # next1= Node(None)
@@ -195,21 +204,21 @@ class Linked_list:
 # print(link_list.kthFromEnd(-2))
 # print(link_list.to_string())
 
-list1 = Linked_list()
+# list1 = Linked_list()
 
-list1.insert(2)
-list1.insert(3)
-list1.insert(1)
-list2 = Linked_list()
-list2.insert(4)
-list2.insert(9)
-list2.insert(5)
+# list1.insert(2)
+# list1.insert(3)
+# list1.insert(1)
+# list2 = Linked_list()
+# list2.insert(4)
+# list2.insert(9)
+# list2.insert(5)
 
-print(list1.to_string())
-print(list2.to_string())
-Linked_list.zip_lists(list1,list2)
-print(list1.to_string())
-print(list2.to_string())
+# print(list1.to_string())
+# print(list2.to_string())
+# Linked_list.zip_lists(list1,list2)
+# print(list1.to_string())
+# print(list2.to_string())
 
 
 

@@ -20,4 +20,4 @@ I used the reverse method to reverse the linked list to find the kth node in fro
 The solution in the Whiteboard and in the linked_list.py file 
 
 ## PR link
-https://github.com/MohammadSalhab99/data-structures-and-algorithms./compare/linked-list?expand=1
+https://github.com/MohammadSalhab99/data-structures-and-algorithms./compare/linked-list-zip?expand=1

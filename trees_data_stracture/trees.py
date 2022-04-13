@@ -128,6 +128,7 @@ class BinaryTree:
                         _walk(node.right)
         _walk(self.root)
         return arr
+    
     # def in_order_itiration(self):
     #     """
     # A method to traverse the tree elements
@@ -262,23 +263,46 @@ class Binary_search_tree(BinaryTree):
         
         return _walk(self.root)
     
+def tree_breadth_first(tree):
+    if tree.root is None:
+        return "empty tree"
+    list1 = []
+    list1.append(tree.root.value)
+    def _walk(root):
+        
+        if root.left:
+            list1.append(root.left.value)
+        if root.right:
+            list1.append(root.right.value)
     
-    
-    
-node1 = TNode(1)
-node2 = TNode(2)
-node3 = TNode(3)
-node4 = TNode(4)
-node1.left = node2
-node1.right = node3
-node3.right = node4
+        if root.left:
+            _walk(root.left)
+        if root.right:
+            _walk(root.right)
+    _walk(tree.root)
+    return list1
 
-tree = BinaryTree()
-tree.root = node1
-bst= Binary_search_tree()
-bst.root = node1
-bst.Add(5)
-bst.pre_order_itiration()
-print(bst.contains(4))
+if __name__ == '__main__':
+    node1 = TNode(2)
+    node2 = TNode(3)
+    node3 = TNode(1)
+    node4 = TNode(4)
+    node5 = TNode(7)
+    node6 = TNode(25)
+    node7 = TNode(11)
+    node1.left = node2
+    node1.right = node3
+    node2.left = node4
+    node2.right = node5
+    node3.left = node6
+    node3.right = node7
 
+    tree = BinaryTree()
+    tree.root = node1
+    bst= Binary_search_tree()
+    tree.root = node1
+    # bst.Add(5)
+    # bst.pre_order_itiration()
+    # print(bst.contains(4))
+    print(tree_breadth_first(tree))
 

@@ -26,3 +26,20 @@ A tree is a collection of entities called nodes. Nodes are connected by edges. E
 using recursive approuch to traverse the tree the comlixity is O(N)
 ## API
 IN the description of the challenge 
+
+# breadth_first_search
+## Challenge Summary
+
+    Write a function called breadth first
+    Arguments: tree
+    Return: list of all values in the tree, in the order they were encountered
+
+## Whiteboard Process
+![breadth-first-search](https://user-images.githubusercontent.com/61474974/163270599-946d994b-e1c9-453b-8e16-d4a32a779970.jpg)
+
+https://miro.com/app/board/uXjVO8n0uew=/
+## Approach & Efficiency
+I used the recursive approuch to traverse through the the tree, it doesn't take a lot of time from me to find the solution, and the complexity of the algorithm is O(n) in the worst case 
+
+## Solution
+The solution in the python file and in the Whiteboard 

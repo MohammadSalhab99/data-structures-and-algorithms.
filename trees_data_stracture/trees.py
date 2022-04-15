@@ -193,7 +193,28 @@ class BinaryTree:
                 stack.push(current.left)
             current = stack.pop()
             print(current.value)
+    def get_max(self):
+        """This function taks a tree and returns the maximum value of that tree 
 
+        Returns:
+            value: the maximum value of the tree
+        """
+        if self.root == None:
+            return "tree is empty"
+        _max = self.root.value
+
+        def _walk(node):
+            nonlocal _max
+            if node.value > _max:
+                _max = node.value
+            if node.left:
+                _walk(node.left)
+            if node.right:
+                _walk(node.right)
+
+        _walk(self.root)
+        return _max
+    
 
 class Binary_search_tree(BinaryTree):
     """This class build a binary search tree
@@ -263,6 +284,16 @@ class Binary_search_tree(BinaryTree):
         
         return _walk(self.root)
     
+        
+ 
+
+
+
+
+
+
+
+
 def tree_breadth_first(tree):
     if tree.root is None:
         return "empty tree"

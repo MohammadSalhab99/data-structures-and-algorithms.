@@ -43,3 +43,4 @@ I used the recursive approuch to traverse through the the tree, it doesn't take 
 
 ## Solution
 The solution in the python file and in the Whiteboard 
+

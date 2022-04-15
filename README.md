@@ -44,3 +44,31 @@ I used the recursive approuch to traverse through the the tree, it doesn't take 
 ## Solution
 The solution in the python file and in the Whiteboard 
 
+
+# Find_max Summary 
+
+This challenge asks to write a method in tree class to get the maximum value of the tree
+## Whiteboard Process
+![tree-max (1)](https://user-images.githubusercontent.com/61474974/163578893-076da6ab-b938-40a3-8f8d-db67eee2206f.jpg)
+
+## Approach & Efficiency
+I used the recursive approuch to traverse through the tree and find the maximum value of the tree the time complexity is O(n) in the worst case and the space complexity is O(1)
+## Solution
+def get_max(self):
+        if self.root == None:
+            return "tree is empty"
+        _max = self.root.value
+
+        def _walk(node):
+            nonlocal _max
+            if node.value > _max:
+                _max = node.value
+            if node.left:
+                _walk(node.left)
+            if node.right:
+                _walk(node.right)
+
+        _walk(self.root)
+        return _max
+
+

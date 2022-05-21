@@ -41,3 +41,5 @@ and the space complexity is O(n)
     hash
     - Arguments: key
     - Returns: Index in the collection for that key
+
+PR link : https://github.com/MohammadSalhab99/data-structures-and-algorithms./compare/hashtable?expand=1

@@ -17,6 +17,7 @@ class HashTable(object):
         """
         # Hello
         sum_of_ascii = 0
+        
         for ch in key:
             ch_ascii = ord(ch)  # 86
             sum_of_ascii += ch_ascii
@@ -55,16 +56,16 @@ class HashTable(object):
 
     # def find(self, key):
 
-    def __getitem__(self, key):
-        # call the get hash method and send the key to it
-        idx = self._get_hash(key)
-        if(self.map[idx] == None):
-            return None
-        # get that index and look it up from the map
-        # return the value stroed in that index
-        for i in self.map[idx]:
-            if key == i[0]:
-                return i[1]
+    # def __getitem__(self, key):
+    #     # call the get hash method and send the key to it
+    #     idx = self._get_hash(key)
+    #     if(self.map[idx] == None):
+    #         return None
+    #     # get that index and look it up from the map
+    #     # return the value stroed in that index
+    #     for i in self.map[idx]:
+    #         if key == i[0]:
+    #             return i[1]
 
     def keys(self):
         """this method returns all the keys in the hash table
@@ -82,38 +83,21 @@ class HashTable(object):
 
 def repeatedWord(str):
     """this function takes a string and returns the first repeated word in the string, using the hash table
-
     Args:
-        str (_type_): _description_
-
+        str : string
     Returns:
-        _type_: _description_
+        String: first repeated word 
     """
+    if len(str)==0:
+        return "empty string"
     table = HashTable()
+    str =str.replace(',', '')
     list_of_words = str.split()
-    x = 0
+
     for i in list_of_words:
-        table.__setitem__(i.lower(), i.lower())
-        x += 1
-    # print(table.map)
-    for j in table.map:
-        if j != None and len(j) > 1:
-            return j[0]
-        x += 1
-        return "hi"
-
-
-print( repeatedWord(
-    'Once upon a time, there was a brave princess who...') )
-
-print (repeatedWord('''It was the best of times, it was the worst of times,
-                     it was the age of wisdom, it was the age of foolishness,
-                     it was the epoch of belief, it was the epoch of incredulity,
-                     it was the season of Light, it was the season of Darkness,
-                     it was the spring of hope, it was the winter of despair, 
-                     we had everything before us, we had nothing before us, we were
-                     all going direct to Heaven, we were all going direct the other way – 
-                     in short, the period was so far like the present period, that some of 
-                     its noisiest authorities insisted on its being received, for good or for 
-                     evil, in the superlative degree of comparison only...''')) 
+        idx=table._get_hash(i.lower())
+        if table.map[idx]!= None and table.map[idx][0][0]==i.lower():
+            return table.map[idx][0][0]
+        else:
+            table.__setitem__(i.lower(), i.lower())
 

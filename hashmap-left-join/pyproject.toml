@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "trees-data-stracture"
+name = "hashmap-left-join"
 version = "0.1.0"
 description = ""
 authors = ["MohammadSalhab99 <mohammadsalhab8@gmail.com>"]

@@ -37,7 +37,6 @@ class HashTable(object):
     def contains(self,key):
         """This method takes a key and returns True if the key in the hash table else
         return False
-
         Args:
             key  
         Returns:
@@ -68,7 +67,6 @@ class HashTable(object):
     
     def keys(self):
         """this method returns all the keys in the hash table
-
         Returns:
             list: collection of all the keys in the hash table
         """
